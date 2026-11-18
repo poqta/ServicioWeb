@@ -13,14 +13,14 @@ import java.util.ArrayList;
 import java.util.List;
 public class UsuarioService {
 
-    // lo que va luego de la pleca son endpoint, representa un metodo de consulta dentro de mi aplicacion
+    // Endpoint, representa un metodo de consulta dentro de mi aplicacion
     private static final String URL = "https://jsonplaceholder.typicode.com/users";
 
     public List<Usuario> obtenerUsuarios() throws IOException, InterruptedException {
         // Comunicarse con el servicio web para obtener la lista de usuarios
         HttpClient cliente = HttpClient.newHttpClient();
 
-        // Es la peticion que se va a realizar al servicio web, en este caso es un GET
+        // Peticion que se va a realizar al servicio web, en este caso es un GET
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(URL))
                 .timeout(Duration.ofSeconds(15))
@@ -46,7 +46,7 @@ public class UsuarioService {
 
         List<Usuario> usuarios = new ArrayList<>();
 
-        // recorrer el arreglo JSON para mapearlo a objetos Usuario
+        // Recorrer el arreglo JSON para mapearlo a objetos Usuario
         for (JsonNode datos : rootNode) {
             Usuario usuario = new Usuario(
                     datos.get("id").asInt(),

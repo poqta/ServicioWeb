@@ -1,4 +1,3 @@
-
 package ni.edu.uam.servicioweb.controller;
 
 import ni.edu.uam.servicioweb.model.Usuario;
@@ -59,7 +58,7 @@ public class UsuariosController {
                 new PropertyValueFactory<>("username"));
 
         colCorreo.setCellValueFactory(
-                new PropertyValueFactory<>("correo"));
+                new PropertyValueFactory<>("email"));
 
         colTelefono.setCellValueFactory(
                 new PropertyValueFactory<>("telefono"));

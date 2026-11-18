@@ -14,7 +14,7 @@
             </font>
         </Label>
 
-        <Button fx:id="btnConsultar" layoutX="25.0" layoutY="75.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #34699A;                        -fx-text-fill: white;                        -fx-background-radius: 5;                        -fx-font-size: 13px;" text="Consultar usuarios" />
+        <Button fx:id="btnConsultar" layoutX="25.0" layoutY="75.0" mnemonicParsing="false" onAction="#consultarUsuarios" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #34699A;                        -fx-text-fill: white;                        -fx-background-radius: 5;                        -fx-font-size: 13px;" text="Consultar usuarios" />
 
         <Label fx:id="lblEstado" layoutX="190.0" layoutY="85.0" text="Presione Consultar usuarios" textFill="#64748B">
             <font>
