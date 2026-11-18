@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="514.0" prefWidth="766.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ni.edu.uam.servicioweb.controller.UsuariosController">
+
+    <children>
+
+        <Label layoutX="25.0" layoutY="20.0" text="Consulta de usuarios - API REST" textFill="#263238">
+            <font>
+                <Font name="Palatino Linotype Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <Button fx:id="btnConsultar" layoutX="25.0" layoutY="75.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #34699A;                        -fx-text-fill: white;                        -fx-background-radius: 5;                        -fx-font-size: 13px;" text="Consultar usuarios" />
+
+        <Label fx:id="lblEstado" layoutX="190.0" layoutY="85.0" text="Presione Consultar usuarios" textFill="#64748B">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </Label>
+      <TableView fx:id="tblUsuarios" layoutX="14.0" layoutY="130.0" prefHeight="355.0" prefWidth="738.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="60.0" text="ID" />
+          <TableColumn fx:id="colNombre" prefWidth="106.0" text="Nombre" />
+            <TableColumn fx:id="colUsername" prefWidth="102.0" text="Username" />
+            <TableColumn fx:id="colCorreo" prefWidth="120.0" text="Correo" />
+            <TableColumn fx:id="colTelefono" prefWidth="102.0" text="Télefono" />
+            <TableColumn fx:id="colCiudad" prefWidth="131.0" text="Ciudad" />
+            <TableColumn fx:id="colEmpresa" prefWidth="116.0" text="Empresa" />
+        </columns>
+      </TableView>
+
+    </children>
+</AnchorPane>
