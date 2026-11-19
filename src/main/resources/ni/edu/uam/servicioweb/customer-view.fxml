@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="530.0" prefWidth="1065.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ni.edu.uam.servicioweb.controller.CustomerController">
+    <children>
+
+        <!-- Titulo -->
+        <Label layoutX="25.0"
+               layoutY="25.0"
+               text="Consulta de clientes"
+               textFill="#263238">
+            <font>
+                <Font name="System Bold" size="21.0"/>
+            </font>
+        </Label>
+
+        <!-- Descripcion -->
+        <Label layoutX="25.0"
+               layoutY="63.0"
+               text="Consulta de clientes registrados"
+               textFill="#64748B">
+            <font>
+                <Font size="13.0"/>
+            </font>
+        </Label>
+
+        <!-- Boton consultar -->
+        <Button fx:id="btnConsultar"
+                layoutX="25.0"
+                layoutY="105.0"
+                mnemonicParsing="false"
+                onAction="#consultarClientes"
+                prefHeight="36.0"
+                prefWidth="160.0"
+                text="Consultar clientes"
+                style="-fx-background-color: #34699A;
+                       -fx-text-fill: white;
+                       -fx-background-radius: 5;
+                       -fx-font-size: 13px;"/>
+
+        <!-- Mensaje -->
+        <Label fx:id="lblEstado"
+               layoutX="200.0"
+               layoutY="115.0"
+               text="Presione Consultar clientes"
+               textFill="#64748B">
+            <font>
+                <Font size="13.0"/>
+            </font>
+        </Label>
+
+        <!-- Tabla -->
+        <TableView fx:id="tblClientes"
+                   layoutX="25.0"
+                   layoutY="151.0"
+                   prefHeight="365.0"
+                   prefWidth="1011.0"
+                   style="-fx-background-color: white;
+                          -fx-border-color: #DCE1E6;
+                          -fx-font-size: 12px;">
+
+            <columns>
+
+                <TableColumn fx:id="colId"
+                             prefWidth="55.0"
+                             text="ID"/>
+
+                <TableColumn fx:id="colNombre"
+                             prefWidth="94.0"
+                             text="Nombre"/>
+
+                <TableColumn fx:id="colApellido"
+                             prefWidth="89.0"
+                             text="Apellido"/>
+
+                <TableColumn fx:id="colCorreo"
+                             prefWidth="84.0"
+                             text="Correo"/>
+
+                <TableColumn fx:id="colTelefono"
+                             prefWidth="92.0"
+                             text="Teléfono"/>
+
+                <TableColumn fx:id="colPais"
+                             prefWidth="88.0"
+                             text="País"/>
+
+                <TableColumn fx:id="colCiudad"
+                             prefWidth="103.0"
+                             text="Ciudad"/>
+
+                <TableColumn fx:id="colIngreso"
+                             prefWidth="132.0"
+                             text="Ingreso anual"/>
+
+                <TableColumn fx:id="colScore"
+                             prefWidth="92.0"
+                             text="Score"/>
+
+                <TableColumn fx:id="colDeuda"
+                             prefWidth="94.0"
+                             text="Deuda"/>
+
+                <TableColumn fx:id="colEstadoCliente"
+                             prefWidth="86.0"
+                             text="Estado"/>
+
+            </columns>
+
+            <placeholder>
+                <Label text="Tabla sin contenido"
+                       textFill="#8A94A6"/>
+            </placeholder>
+
+        </TableView>
+
+    </children>
+</AnchorPane>
